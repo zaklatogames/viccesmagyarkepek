@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicces Magyar Képek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+        
+        /* Padding to account for the fixed header so content isn't hidden under it */
+        section {
+            scroll-margin-top: 5rem; /* 80px, the height of our header */
+        }
+
+        /* Hide scrollbar for horizontal scroll containers but keep functionality */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Custom color for Viber button */
+        .bg-viber {
+            background-color: #7360f2;
+        }
+        .bg-viber:hover {
+            background-color: #5d4cc4;
+        }
+        
+        /* Active nav link style */
+        .nav-active {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-900 antialiased flex flex-col relative">
+
+    <header class="bg-[#FFD700] fixed w-full top-0 z-50 shadow-md h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex flex-col sm:flex-row justify-between items-center h-full">
+                <!-- Logo and Title -->
+                <div class="flex items-center gap-3 w-full sm:w-auto justify-center sm:justify-start pt-2 sm:pt-0">
+                    <img src="https://i.ibb.co/jvCYgtwJ/Screenshot-20260927-115917-com-viber-voip-Conversation-Activity.jpg" alt="Icon" class="h-10 w-10 sm:h-12 sm:w-12 object-cover rounded-full shadow-sm">
+                    <span class="font-bold text-lg sm:text-xl hidden md:block">Vicces Magyar Képek</span>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <nav class="flex gap-2 sm:gap-4 text-xs sm:text-sm md:text-base font-semibold pb-2 sm:pb-0 w-full sm:w-auto justify-center sm:justify-end overflow-x-auto hide-scrollbar whitespace-nowrap">
+                    <a href="#home" class="nav-link px-3 py-2 rounded-md transition-colors hover:bg-black/10">Főoldal</a>
+                    <a href="#best" class="nav-link px-3 py-2 rounded-md transition-colors hover:bg-black/10">Legjobb mémek</a>
+                    <a href="#trending" class="nav-link px-3 py-2 rounded-md transition-colors hover:bg-black/10">Felkapott mémek</a>
+                    <a href="#join" class="nav-link px-3 py-2 rounded-md transition-colors hover:bg-black/10">Csatlakozás</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full mx-auto flex flex-col mt-20">
+        
+        <section id="home" class="min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center p-6 bg-white">
+            <div class="max-w-3xl mx-auto text-center">
+                <img src="https://i.ibb.co/jvCYgtwJ/Screenshot-20260927-115917-com-viber-voip-Conversation-Activity.jpg" alt="Nagy Ikon" class="w-32 h-32 sm:w-[150px] sm:h-[150px] mx-auto object-cover rounded-3xl shadow-xl mb-8">
+                
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-8 tracking-tight">Vicces Magyar Képek</h1>
+                
+                <div class="text-lg sm:text-xl md:text-2xl text-gray-700 space-y-6 leading-relaxed font-medium bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <p>Szia! Ha szereted a magyar mémeket itt a helyed, sok mém és nevetés granatált. 😉</p>
+                    <p>Ha megosztod ezt a csatit, azt előre is nagyon köszönöm. Mire vársz? Jó közösség, vicces mémek. Ne félj belépni!</p>
+                    <p class="font-bold text-gray-900 text-2xl mt-4">Cél: 2000 tag 😄</p>
+                    <p class="text-sm font-semibold text-[#FFD700] bg-black inline-block px-4 py-2 rounded-full mt-2">Társcsatorna: Viccek Magyarul</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="best" class="min-h-[80vh] flex flex-col py-16 bg-gray-50 border-t border-gray-100 w-full overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-4 border-[#FFD700] inline-block pb-2">Legjobb mémek</h2>
+                <p class="text-gray-500 mt-2 text-sm">Görgess oldalra a mémekért!</p>
+            </div>
+            
+            <!-- Horizontal Scroll Container -->
+            <div class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-6 px-4 sm:px-8 md:px-16 pb-8 w-full">
+                <!-- Meme Cards Placeholders -->
+                <div class="snap-center shrink-0 w-[280px] sm:w-[320px] bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x400/eeeeee/999999?text=M%C3%A9m+helye+1" class="w-full h-[280px] sm:h-[320px] object-cover" alt="Mém">
+                    <div class="p-4"><p class="text-center font-semibold text-gray-700">Mém 1</p></div>
+                </div>
+                <div class="snap-center shrink-0 w-[280px] sm:w-[320px] bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x400/eeeeee/999999?text=M%C3%A9m+helye+2" class="w-full h-[280px] sm:h-[320px] object-cover" alt="Mém">
+                    <div class="p-4"><p class="text-center font-semibold text-gray-700">Mém 2</p></div>
+                </div>
+                <div class="snap-center shrink-0 w-[280px] sm:w-[320px] bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x400/eeeeee/999999?text=M%C3%A9m+helye+3" class="w-full h-[280px] sm:h-[320px] object-cover" alt="Mém">
+                    <div class="p-4"><p class="text-center font-semibold text-gray-700">Mém 3</p></div>
+                </div>
+                <div class="snap-center shrink-0 w-[280px] sm:w-[320px] bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x400/eeeeee/999999?text=M%C3%A9m+helye+4" class="w-full h-[280px] sm:h-[320px] object-cover" alt="Mém">
+                    <div class="p-4"><p class="text-center font-semibold text-gray-700">Mém 4</p></div>
+                </div>
+                <div class="snap-center shrink-0 w-[280px] sm:w-[320px] bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x400/eeeeee/999999?text=M%C3%A9m+helye+5" class="w-full h-[280px] sm:h-[320px] object-cover" alt="Mém">
+                    <div class="p-4"><p class="text-center font-semibold text-gray-700">Mém 5</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trending" class="min-h-[80vh] flex flex-col py-16 bg-white border-t border-gray-100 w-full overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-4 border-[#FFD700] inline-block pb-2">Felkapott mémek</h2>
+                <p class="text-gray-500 mt-2 text-sm">Nézd meg mik pörögnek most a legjobban!</p>
+            </div>
+            
+            <!-- Horizontal Scroll Container -->
+            <div class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-6 px-4 sm:px-8 md:px-16 pb-8 w-full">
+                <!-- Meme Cards Placeholders -->
+                <div class="snap-center shrink-0 w-[280px] sm:w-[320px] bg-gray-50 rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x400/dddddd/666666?text=Felkapott+1" class="w-full h-[280px] sm:h-[320px] object-cover" alt="Mém">
+                    <div class="p-4"><p class="text-center font-semibold text-gray-700">Trending 1</p></div>
+                </div>
+                <div class="snap-center shrink-0 w-[280px] sm:w-[320px] bg-gray-50 rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x400/dddddd/666666?text=Felkapott+2" class="w-full h-[280px] sm:h-[320px] object-cover" alt="Mém">
+                    <div class="p-4"><p class="text-center font-semibold text-gray-700">Trending 2</p></div>
+                </div>
+                <div class="snap-center shrink-0 w-[280px] sm:w-[320px] bg-gray-50 rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x400/dddddd/666666?text=Felkapott+3" class="w-full h-[280px] sm:h-[320px] object-cover" alt="Mém">
+                    <div class="p-4"><p class="text-center font-semibold text-gray-700">Trending 3</p></div>
+                </div>
+                <div class="snap-center shrink-0 w-[280px] sm:w-[320px] bg-gray-50 rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x400/dddddd/666666?text=Felkapott+4" class="w-full h-[280px] sm:h-[320px] object-cover" alt="Mém">
+                    <div class="p-4"><p class="text-center font-semibold text-gray-700">Trending 4</p></div>
+                </div>
+                <div class="snap-center shrink-0 w-[280px] sm:w-[320px] bg-gray-50 rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x400/dddddd/666666?text=Felkapott+5" class="w-full h-[280px] sm:h-[320px] object-cover" alt="Mém">
+                    <div class="p-4"><p class="text-center font-semibold text-gray-700">Trending 5</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="min-h-[70vh] flex flex-col items-center justify-center p-6 bg-gray-50 border-t border-gray-100">
+            <div class="text-center max-w-lg mx-auto bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
+                <img src="https://placehold.co/100x100/7360f2/ffffff?text=Viber" class="w-20 h-20 mx-auto rounded-2xl mb-6 shadow-md" alt="Viber Icon">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">Gyere, sok mémünk van:</h2>
+                
+                <a href="https://invite.viber.com/?g2=AQAJAj5ABkF0%2BFJYL%2FuTiG%2B3AKaidLUOTRQJ3bJg5W9bcB7D2NtCIv7KNx7wuE%2Bb" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center gap-3 w-full sm:w-auto bg-viber text-white text-lg font-bold py-5 px-10 rounded-full shadow-lg transition-all hover:scale-105 hover:shadow-xl duration-200">
+                    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.062 13.914c-.655-.386-1.425-.133-2.02.261l-2.073 1.34c-.456.294-1.07.214-1.442-.187-2.316-2.52-4.04-5.328-5.06-8.52-.162-.48.118-1.026.6-1.186l2.368-.788c.628-.208.974-.88.75-1.523l-1.92-5.568c-.244-.71-1.01-1.1-1.748-.888L8.14 1.706C4.858 2.656 2.054 5.378 1.134 8.78c-1.39 5.16 1.056 10.74 5.925 13.568 2.628 1.52 5.56 2.096 8.528 1.636 3.12-.472 5.626-2.616 6.55-5.696l.872-2.906c.216-.714-.176-1.472-.947-1.472-.008.004-.012.004-.012.004z"/>
+                    </svg>
+                    Csatlakozás a csatornához
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-black text-white text-center py-8 px-4 mt-auto w-full z-10 relative">
+        <p class="font-medium text-lg">Vicces Magyar Képek 2024-2026 &copy;</p>
+        <p class="text-gray-400 mt-2 text-sm">Weboldalt készítette: Úti papucs</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Setup Intersection Observer to detect which section is currently on screen
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -70% 0px', // Adjusted to trigger active state more accurately
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const currentId = entry.target.getAttribute('id');
+                        
+                        // Remove active class from all links
+                        navLinks.forEach(link => {
+                            link.classList.remove('nav-active');
+                            // Add active class to the link matching current section
+                            if (link.getAttribute('href') === `#${currentId}`) {
+                                link.classList.add('nav-active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all main sections
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
